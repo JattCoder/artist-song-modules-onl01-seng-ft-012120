@@ -17,11 +17,15 @@ class Song
   def artist=(artist)
     @artist = artist
   end
-  # extend Memorable
+  
   extend Memorable::ClassMethods
+  
   include Memorable::InstanceMethods
+  
   extend Findable
+  
   include PARAMABLE
+  
   attr_accessor :name, :artist
 
   def self.reset_all
